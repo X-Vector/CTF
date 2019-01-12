@@ -1,5 +1,5 @@
 # Web Challenge : 50 Point
-- The Challenge is a zip file Which Contain a php code 
+- The Challenge is a [zip](https://github.com/X-Vector/CTF/blob/master/Bsides/c99.zip) file Which Contain a php code 
 ``` 
 <?php
 $kyo1="JGM9J2NvdW50JzskYT0kX0NPT0tecJRTtecpZihyZecXecNecldCgkYSeck9PSecdecmbCcgJiYgJGMecoJGEpPjMpe2luaec";
@@ -25,4 +25,4 @@ $c='count';$a=$_COOKIE;if(reset($a)=='fl' && $c($a)>3){ini_set('error_log', '/de
 
 
 # Crypto Challenge : 50 Point 
-- The Challenge is a mp3 file 
+- The Challenge is a [mp3](https://github.com/X-Vector/CTF/blob/master/Bsides/abusing.mp3) file 
