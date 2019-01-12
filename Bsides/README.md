@@ -26,6 +26,6 @@ $c='count';$a=$_COOKIE;if(reset($a)=='fl' && $c($a)>3){ini_set('error_log', '/de
 
 # Crypto Challenge : 50 Point 
 - The Challenge is a [mp3](https://github.com/X-Vector/CTF/blob/master/Bsides/abusing.mp3) file Which This Sound Like Morse code 
-- Go to this website https://morsecode.scphillips.com/labs/audio-decoder-adaptive/ then upload mp3 file and you get this result
+- Go to this [website](https://morsecode.scphillips.com/labs/audio-decoder-adaptive/) then upload mp3 file and you get this result
 ![Morse code](https://raw.githubusercontent.com/X-Vector/CTF/master/Bsides/morse.png?token=Ac-MuIyfT9F5B5lwWFnKAdTu2I1GK86Nks5cOkg0wA%3D%3D)
 - We Play in This Words `ETTE L A G I N M C O D E W E T R U S T` To Get This Result `FLAGINMCODEWETRUST` Then We Submit and we get is wrong Then we add `{}_` to words to be `FLAG{IN_MCODE_TRUST}` and Flag is Correct
