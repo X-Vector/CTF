@@ -121,7 +121,7 @@ File.WriteAllText(Path.GetTempPath() + str2 + str, Convert.ToString(cryptography
 1613383286900676679
 2413992114436498344
 ```
-- You Can use My [RSA Tool](https://github.com/X-Vector/X-RSA) That I publish it in github To decode This RSA Attack
+- You Can use My [RSA Tool](https://github.com/X-Vector/X-RSA) That I publish it in github To decode This RSA Attack and decode other Attacks
 - Now This Numbers contain a right random number
 - We have This code in `Program.cs`
 ```
