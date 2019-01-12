@@ -54,7 +54,7 @@ $c='count';$a=$_COOKIE;if(reset($a)=='fl' && $c($a)>3){ini_set('error_log', '/de
 - I'm Extract The zip file and found that the image is 13 Mbyte , So There a something hidden in the photo
 - I'm used steghide in linux `steghide extract -sf rockme.jpg` , you can install it `apt install steghide`
 - steghide requierd a password !!! , I see The Photo and zoom in When I found This Words With Grey Color :D
-![Password](https://raw.githubusercontent.com/X-Vector/CTF/master/Bsides/stage2.png?token=Ac-MuA2Jv8cgwzwd0S_h7xgJ7bTE5EPBks5cOlF2wA%3D%3D)
+![Password](https://github.com/X-Vector/CTF/blob/master/Bsides/stage2.png?raw=true)
 - I try to set this words `l3757ryh4rd3r` as password and the reinvoke.txt file is output
 - The File Contain This Character and string
 ```
@@ -82,5 +82,5 @@ flag{d3v3l0p3d_f0r_74l3n75}flag{d3v3l0p3d_f0r_74l3n75}
 # Crypto Challenge : abusing 50 Point
 - The Challenge is a [mp3](https://github.com/X-Vector/CTF/blob/master/Bsides/abusing.mp3) file Which This Sound Like Morse code
 - Go to this [website](https://morsecode.scphillips.com/labs/audio-decoder-adaptive/) then upload mp3 file and you get this result
-![Morse code](https://raw.githubusercontent.com/X-Vector/CTF/master/Bsides/morse.png?token=Ac-MuO-G2K009L3yijAsQ08GWK0t_lyFks5cOlHIwA%3D%3D)
+![Morse code](https://github.com/X-Vector/CTF/blob/master/Bsides/morse.png?raw=true)
 - We Play in This Words `ETTE L A G I N M C O D E W E T R U S T` To Get This Result `FLAGINMCODEWETRUST` Then We Submit and we get is wrong Then we add `{}_` to words to be `FLAG{IN_MCODE_TRUST}` and Flag is Correct
