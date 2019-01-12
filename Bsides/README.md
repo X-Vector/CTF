@@ -49,7 +49,7 @@ $c='count';$a=$_COOKIE;if(reset($a)=='fl' && $c($a)>3){ini_set('error_log', '/de
 ```
 - you will see that variable `$a` is `fl` and variable `$k` is `ag{hidden_in_php}` so your flag is `flag{hidden_in_php}`
 
-# Steganography | Zoom Eye 50 Point
+# Steganography : Zoom Eye 50 Point
 - The Challenge is a [zip](https://github.com/X-Vector/CTF/blob/master/Bsides/invokeme.zip) file Which Contain a image They Give us The Password of zip file `squnity`
 - I'm Extract The zip file and found that the image is 13 Mbyte , So There a something hidden in the photo
 - I'm used steghide in linux `steghide extract -sf rockme.jpg` , you can install it `apt install steghide`
