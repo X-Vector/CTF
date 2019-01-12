@@ -49,9 +49,38 @@ $c='count';$a=$_COOKIE;if(reset($a)=='fl' && $c($a)>3){ini_set('error_log', '/de
 ```
 - you will see that variable `$a` is `fl` and variable `$k` is `ag{hidden_in_php}` so your flag is `flag{hidden_in_php}`
 
+# Steganography | Zoom Eye 50 Point
+- The Challenge is a [zip](https://github.com/X-Vector/CTF/blob/master/Bsides/invokeme.zip) file Which Contain a image They Give us The Password of zip file `squnity`
+- I'm Extract The zip file and found that the image is 13 Mbyte , So There a something hidden in the photo
+- I'm used steghide in linux `steghide extract -sf rockme.jpg` , you can install it `apt install steghide`
+- steghide requierd a password !!! , I see The Photo and zoom in When I found This Words With Grey Color :D
+![Password](https://raw.githubusercontent.com/X-Vector/CTF/master/Bsides/stage2.png?token=Ac-MuA2Jv8cgwzwd0S_h7xgJ7bTE5EPBks5cOlF2wA%3D%3D)
+- I try to set this words `l3757ryh4rd3r` as password and the reinvoke.txt file is output
+- The File Contain This Character and string
+```
+{@C6> xADF> :D D:>A=J 5F>>J E6IE @7 E96 AC:?E:?8 2?5 EJA6D6EE:?8 :?5FDECJ] {@C6> xADF> 92D 366? E96 :?5FDECJVD DE2?52C5 5F>>J E6IE 6G6C D:?46 E96 `d__D[ H96? 2? F?<?@H? AC:?E6C E@@< 2 82==6J @7 EJA6 2?5 D4C2>3=65 :E E@ >2<6 2 EJA6 DA64:>6? 3@@<] xE 92D DFCG:G65 ?@E @?=J 7:G6 46?EFC:6D[ 3FE 2=D@ E96 =62A :?E@ 6=64EC@?:4 EJA6D6EE:?8[ C6>2:?:?8 6DD6?E:2==J F?492?865] xE H2D A@AF=2C:D65 :? E96 `he_D H:E9 E96 C6=62D6 @7 {6EC2D6E D966ED 4@?E2:?:?8 {@C6> xADF> A2DD286D[ 2?5 >@C6 C646?E=J H:E9 56D<E@A AF3=:D9:?8 D@7EH2C6 =:<6 p=5FD !286|2<6C :?4=F5:?8 G6CD:@?D @7 {@C6> xADF>]
+7=28L5bGb=_Ab507_C0fc=b?fdN
+```
+- I Think and search in google When I found it's rot47
+- I go to [decode.fr](https://www.dcode.fr/rot-47-cipher) and decode it , The Output is
+```
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+flag{d3v3l0p3d_f0r_74l3n75}flag{d3v3l0p3d_f0r_74l3n75}
+```
+- Then The Flag is `flag{d3v3l0p3d_f0r_74l3n75}`
+
+
+
+
+
+
+
+
+
+
 
 # Crypto Challenge : abusing 50 Point
 - The Challenge is a [mp3](https://github.com/X-Vector/CTF/blob/master/Bsides/abusing.mp3) file Which This Sound Like Morse code
 - Go to this [website](https://morsecode.scphillips.com/labs/audio-decoder-adaptive/) then upload mp3 file and you get this result
-![Morse code](https://raw.githubusercontent.com/X-Vector/CTF/master/Bsides/morse.png?token=Ac-MuIyfT9F5B5lwWFnKAdTu2I1GK86Nks5cOkg0wA%3D%3D)
+![Morse code](https://raw.githubusercontent.com/X-Vector/CTF/master/Bsides/morse.png?token=Ac-MuO-G2K009L3yijAsQ08GWK0t_lyFks5cOlHIwA%3D%3D)
 - We Play in This Words `ETTE L A G I N M C O D E W E T R U S T` To Get This Result `FLAGINMCODEWETRUST` Then We Submit and we get is wrong Then we add `{}_` to words to be `FLAG{IN_MCODE_TRUST}` and Flag is Correct
