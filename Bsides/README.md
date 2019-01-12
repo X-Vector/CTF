@@ -24,7 +24,7 @@ I've seen on the internet that I can do this tool with myself with some tools ba
 What's the name of this piece amid the family names?
 The is Flag `leonardo`
 
-# Web Challenge : 50 Point
+# Web Challenge : d3c0d3 m3 50 Point
 - The Challenge is a [zip](https://github.com/X-Vector/CTF/blob/master/Bsides/c99.zip) file Which Contain a php code
 ```
 <?php
@@ -50,7 +50,7 @@ $c='count';$a=$_COOKIE;if(reset($a)=='fl' && $c($a)>3){ini_set('error_log', '/de
 - you will see that variable `$a` is `fl` and variable `$k` is `ag{hidden_in_php}` so your flag is `flag{hidden_in_php}`
 
 
-# Crypto Challenge : 50 Point
+# Crypto Challenge : abusing 50 Point
 - The Challenge is a [mp3](https://github.com/X-Vector/CTF/blob/master/Bsides/abusing.mp3) file Which This Sound Like Morse code
 - Go to this [website](https://morsecode.scphillips.com/labs/audio-decoder-adaptive/) then upload mp3 file and you get this result
 ![Morse code](https://raw.githubusercontent.com/X-Vector/CTF/master/Bsides/morse.png?token=Ac-MuIyfT9F5B5lwWFnKAdTu2I1GK86Nks5cOkg0wA%3D%3D)
