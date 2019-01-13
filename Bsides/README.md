@@ -1,4 +1,4 @@
-- We are Revers3c Team Got Secound Place
+# We are Revers3c Team Got Secound Place
 ```
 Challenge                     Category                    Point           Statue
 Search with police        General Information              30             Solved
@@ -183,6 +183,7 @@ public static string Aes(byte[] input, string key, string iv, bool Enc, bool Dec
 #
 # Reverse Engneering | $cript kiddie 50 Point
 
+- We Have a [zip file](https://github.com/X-Vector/CTF/raw/master/Bsides/script.exe.zip) 
 - Running the binary will give us this a messagebox showing hex encoded value
 
 ![picture1](https://user-images.githubusercontent.com/46635361/51079417-70526480-16cf-11e9-879a-396c57c04aca.png)
@@ -239,8 +240,8 @@ EndFunc
 #
 # Reverse Engneering | Old Style 150 Point
 
+- We Have a [zip file](https://github.com/X-Vector/CTF/raw/master/Bsides/Reverse.zip) 
 - We were given two binaries with zero imports, a pretty common obfuscation technique used by real-life malwares
-
 ![ss](https://user-images.githubusercontent.com/46635361/51080312-c6300800-16e1-11e9-8e79-6ab54bce4d9a.png)
 
 - upload Mal_1.exe to [hybrid-analysis.com](hybrid-analysis.com/sample/42512f779a32d5e677e534ad87524e886a80572c2de4e47ed993e264735b31ba)
@@ -265,4 +266,4 @@ EndFunc
 
 ![untitled](https://user-images.githubusercontent.com/46635361/51080092-291fa000-16de-11e9-8e9e-10e53d0fe102.png)
 
-- The Flag `vb$_dr0pp3r5_4r3_c0mm0n`
+- The Flag is `vb$_dr0pp3r5_4r3_c0mm0n`
