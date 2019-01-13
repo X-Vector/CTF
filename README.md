@@ -1,2 +1,2 @@
 # CTF Challenges Write Up 
-- [Bsides CTF Computation](https://github.com/X-Vector/CTF/tree/master/SqunityCTF)
+- [Squnity CTF Computation](https://github.com/X-Vector/CTF/tree/master/SqunityCTF)
