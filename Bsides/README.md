@@ -112,7 +112,7 @@ File.WriteAllText(Path.GetTempPath() + str2 + str, Convert.ToString(cryptography
 - This File contain The result of function `cryptography.RSA_m_n_e(left.ToString(), array[1], array[0]))`
 - When I See this Function in `cryptography.cs` I Found That take 3 Parameter Which The First is string Which is Coming from The result of left and The Secound Parameter Take The second BigInteger in array and the Third take the First BigInteger in array
 - This Function is RSA Function Which This Attack is Wiener Attack Becouse `e` is Very BigInteger
-- Let's see The tmp file That Saved in ourpath
+- Let's see The tmp file That Saved in our path
 - We have 4 file which have 5 string and this extension is .tmp and all of them contain a BigInteger
 - The RSA Function encode the Plaintext and saved the Cipher in a one file from our 4 file , So I decode all cipher in 4 files and get this Number
 ```
@@ -161,5 +161,94 @@ public static string Aes(byte[] input, string key, string iv, bool Enc, bool Dec
 ```
 - He use a CBC_MODE and The Keysize is 256 bits and BlockSize is 128 bit
 - He Give Me iv and i have 4 random number on of them is a right number so I Try all Number With His Function and The Cipher is saved in dsafgasf.txt and iv is `ABCDEFGHIJ12`
-- So I call AES Function in this figure `cryptography.Aes(bytes, MyRandomKey, "ABCDEFGHIJ12", false, true)` in 4 Random number
-- Then The Flag is `vb$_dr0pp3r5_4r3_c0mm0n`
+- So I call AES Function in this figure `cryptography.Aes(bytes, MyRandomKey, "ABCDEFGHIJ12", false, true)` in 4 Random number and The Right Number is `2281123928613928259`
+  ![untitled](https://user-images.githubusercontent.com/46635361/51080747-eb287900-16e9-11e9-90a2-967abc8c6088.png)
+- Then The Flag is `Bsides{IT's_Trivial_Ransomware}`
+
+# Reverse Engneering | $cript kiddie 50 Point
+
+Running the binary will give us this a messagebox showing hex encoded value
+
+![picture1](https://user-images.githubusercontent.com/46635361/51079417-70526480-16cf-11e9-879a-396c57c04aca.png)
+
+using PEstudio you can find that the binary was packeds using UPX
+
+![picture2](https://user-images.githubusercontent.com/46635361/51079452-07b7b780-16d0-11e9-8dfc-ae13b9ec93ad.png)
+
+Disable ASLR & Unpack it
+
+![picture3](https://user-images.githubusercontent.com/46635361/51079512-fc18c080-16d0-11e9-9c2b-3e1dba69c7a1.png)
+
+using x64dbg you can find that it uses [IsDebuggerPresent](https://msdn.microsoft.com/en-us/library/windows/desktop/ms680345(v=vs.85).aspx) function to dentermine whenever there is a debugger or not and if there is a debugger a messagebox saying 'This is a third-party compiled AutoIt script.' will show instead.
+
+![untitled](https://user-images.githubusercontent.com/46635361/51079617-b4933400-16d2-11e9-8203-0c3641e5a6a6.png)
+
+Here you can find how to detect AutoIt compailed scripts [AutoIt Malware: From Compiled Binary to Plain-Text Script](https://r3mrum.wordpress.com/2017/07/10/autoit-malware-from-compiled-binary-to-plain-text-script/)
+
+
+Now let's reverse it !
+
+
+using EXE2aut you can extract the actual script
+
+![untitled](https://user-images.githubusercontent.com/46635361/51079703-45b6da80-16d4-11e9-88c6-36f893e67ae0.png)
+
+Here, near the buttom you can find this function
+
+```C
+Func cmmkxdi()
+	Global $povvyzid_qgidn_wyfvjlrasdasd = 202
+	Local $texjyuus_kxmczmsui_waowsej = "0xAFAF301D3DF20EE93EB8B8A9842FB0781FEFAAB30F4628D4"
+	Global $qw_vouefw_jxcp_ucasdasd = 46689
+	Local $var_1044 = asdasfcyzncmmkxdiasd(False, $texjyuus_kxmczmsui_waowsej, "i4m_th3_fl@g")
+	Global $aycqkqgdnvzzuelotalsibomsdsd = 116
+	MsgBox($mb_systemmodal, "BSides Cairo", $texjyuus_kxmczmsui_waowsej)
+EndFunc
+```
+
+so all we need here is to print var_1044 value instead of the hex encoded values in texjyuus_kxmczmsui_waowsej, Change the code to
+
+```C
+Func cmmkxdi()
+	Global $povvyzid_qgidn_wyfvjlrasdasd = 202
+	Local $texjyuus_kxmczmsui_waowsej = "0xAFAF301D3DF20EE93EB8B8A9842FB0781FEFAAB30F4628D4"
+	Global $qw_vouefw_jxcp_ucasdasd = 46689
+	Local $var_1044 = asdasfcyzncmmkxdiasd(False, $texjyuus_kxmczmsui_waowsej, "i4m_th3_fl@g")
+	Global $aycqkqgdnvzzuelotalsibomsdsd = 116
+	MsgBox($mb_systemmodal, "BSides Cairo", $var_1044)
+EndFunc
+```
+
+and run it using the AutoIT interpreter
+
+![untitled](https://user-images.githubusercontent.com/46635361/51079752-c88c6500-16d5-11e9-8baa-800c582f9dc8.png)
+
+# Reverse Engneering | Old Style 150 Point
+
+We were given two binaries with zero imports, a pretty common obfuscation technique used by real-life malwares
+
+![ss](https://user-images.githubusercontent.com/46635361/51080312-c6300800-16e1-11e9-8e79-6ab54bce4d9a.png)
+
+upload Mal_1.exe to [hybrid-analysis.com](hybrid-analysis.com/sample/42512f779a32d5e677e534ad87524e886a80572c2de4e47ed993e264735b31ba)
+
+there are 4 Extraced files one of them named config.vbe which is a [vbs compailed script](https://fileinfo.com/extension/vbe)
+
+![extracted_files](https://user-images.githubusercontent.com/46635361/51080022-7b5fc180-16dc-11e9-8ad6-3d643b5cb37c.png)
+
+and the malware will delete itself at some point using powershell
+
+![untitled](https://user-images.githubusercontent.com/46635361/51080134-b662f480-16de-11e9-9e01-566b8f14c003.png)
+
+now let's get the extracted files ourselves .. open up your win7 debugging vm and just use any file monitor tool i used Moo0, then run the binary.
+
+![s](https://user-images.githubusercontent.com/46635361/51080067-a1399600-16dd-11e9-9c09-9644c2c71c43.png)
+
+locate and decode config.vbe using  decode-vbe.py
+
+![decode_vbe](https://user-images.githubusercontent.com/46635361/51080078-ce864400-16dd-11e9-8f34-3c3998fcaf19.png)
+
+the same vbs script can be found within hybrid-analysis report too.
+
+![untitled](https://user-images.githubusercontent.com/46635361/51080092-291fa000-16de-11e9-8e9e-10e53d0fe102.png)
+
+The Flag `vb$_dr0pp3r5_4r3_c0mm0n`
