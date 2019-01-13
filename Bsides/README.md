@@ -1,18 +1,19 @@
 # We are Revers3c Team Got Secound Place
 ```
-Challenge                     Category                    Point           Statue
-Search with police        General Information              30             Solved
-Vegetables                General Information              30             Solved
-Rocker                    General Information              20             Solved
-WhoAmi                    General Information              50             Solved
-d3c0d3 m3                    Web Security	           50             Solved
-$cript kiddie             Reverse Engineering              50             Solved
-Abusing                     Cryptography                   50             Solved
-My Router Password              Misc                       50             Solved
-Zoom Eye                    Steganography                  50             Solved
-Open the safe              smart contract                  75             Solved
-Old Style                 Reverse Engineering              150            Solved
-Ransom where !              Cryptography                   100            Solved
+Challenge                           Category                    Point           Statue
+Search with police              General Information              30             Solved
+Vegetables                      General Information              30             Solved
+Rocker                          General Information              20             Solved
+WhoAmi                          General Information              50             Solved
+d3c0d3 m3                          Web Security	          	 50             Solved
+$cript kiddie                   Reverse Engineering              50             Solved
+Abusing                           Cryptography                   50             Solved
+My Router Password                    Misc                       50             Solved
+Zoom Eye                          Steganography                  50             Solved
+Open the safe                    Smart contract                  75             Solved
+Old Style                       Reverse Engineering              150            Solved
+Ransom where !                    Cryptography                   100            Solved
+Please don't burn my money       Smart contract                  120              No
 ```
 # General Information : 130 Point in 4 Challenge
 - Rocker : 20 Point
@@ -183,7 +184,7 @@ public static string Aes(byte[] input, string key, string iv, bool Enc, bool Dec
 #
 # Reverse Engneering | $cript kiddie 50 Point
 
-- We Have a [zip file](https://github.com/X-Vector/CTF/raw/master/Bsides/script.exe.zip) 
+- We Have a [zip file](https://github.com/X-Vector/CTF/raw/master/Bsides/script.exe.zip)
 - Running the binary will give us this a messagebox showing hex encoded value
 
 ![picture1](https://user-images.githubusercontent.com/46635361/51079417-70526480-16cf-11e9-879a-396c57c04aca.png)
@@ -240,7 +241,7 @@ EndFunc
 #
 # Reverse Engneering | Old Style 150 Point
 
-- We Have a [zip file](https://github.com/X-Vector/CTF/raw/master/Bsides/Reverse.zip) 
+- We Have a [zip file](https://github.com/X-Vector/CTF/raw/master/Bsides/Reverse.zip)
 - We were given two binaries with zero imports, a pretty common obfuscation technique used by real-life malwares
 ![ss](https://user-images.githubusercontent.com/46635361/51080312-c6300800-16e1-11e9-8e79-6ab54bce4d9a.png)
 
@@ -267,3 +268,18 @@ EndFunc
 ![untitled](https://user-images.githubusercontent.com/46635361/51080092-291fa000-16de-11e9-8e9e-10e53d0fe102.png)
 
 - The Flag is `vb$_dr0pp3r5_4r3_c0mm0n`
+
+#
+# Smart Contract : Open the safe 75 Point
+
+- The Challenge Give Me Two Link [Fisrt Link](https://ropsten.etherscan.io/block/4806991) and [Secound Link](https://ropsten.etherscan.io/tx/0xa88c4db8bf7a74a5987aa6efd50a5adf2383e5050bb67dbd9dcad68b52dd68a7)
+- When We Open First Link We Found That he give me Block Information not More
+- When We Open Secound Link We Found That he give me a Transaction Information and in it we Find Input Data
+```
+0x60806040526040516103973803806103978339810180604052602081101561002657600080fd5b81019080805164010000000081111561003e57600080fd5b8281019050602081018481111561005457600080fd5b815185600182028301116401000000008211171561007157600080fd5b5050929190505050806000908051906020019061008f929190610096565b505061013b565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100d757805160ff1916838001178555610105565b82800160010185558215610105579182015b828111156101045782518255916020019190600101906100e9565b5b5090506101129190610116565b5090565b61013891905b8082111561013457600081600090555060010161011c565b5090565b90565b61024d8061014a6000396000f3fe608060405260043610610046576000357c01000000000000000000000000000000000000000000000000000000009004806312065fe0146100485780635807bb5614610073575b005b34801561005457600080fd5b5061005d61013b565b6040518082815260200191505060405180910390f35b34801561007f57600080fd5b506101396004803603602081101561009657600080fd5b81019080803590602001906401000000008111156100b357600080fd5b8201836020820111156100c557600080fd5b803590602001918460018302840111640100000000831117156100e757600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929050505061015a565b005b60003073ffffffffffffffffffffffffffffffffffffffff1631905090565b8080519060200120818051906020012014151561017657600080fd5b60003073ffffffffffffffffffffffffffffffffffffffff16319050803373ffffffffffffffffffffffffffffffffffffffff167fb2559daa129ad136aac2133ac6a0c75920abbef7d6663a017a94e181b13786c360405160405180910390a33373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f1935050505015801561021c573d6000803e3d6000fd5b50505056fea165627a7a72305820fd61f5f9ee9bae04702d0b9b28201ac9637b7e33cf2d3f09f60480855e10a1b1002900000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000014666c61677b566974616c696b4275746572696e7d000000000000000000000000
+```
+- When We decode it to Ascii or utf-8 the Out Put Will be
+```
+``@R`@Qa8a9`@R` a&W`ý[Qda>W`ý[P` aTW`ý[Q`daqW`ý[PPPPP`Q` aaV[PPa;V[T``a``R` ` `` `a×WQ`ÿUaV[`UaW[aWQU` `aéV[[PPaaV[PV[a8[a4W``UP`aV[PV[V[aMaJ`9`óþ``@R`6aFW`5|c_àaHWcX»VasW[[4aTW`ý[Pa]a;V[`@QR` PP`@Qó[4aW`ý[Pa9`6` aW`ý[5` da³W`ý[` aÅW`ý[5` `daçW`ý[`` ` `@Q`@RR` 7`R``PPPPPPPPPPPaZV[[`0sÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ1PV[Q`  Q`  avW`ý[`0sÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ1P3sÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ²UªÑ6ªÂ:Æ ÇY «¾÷Öf:zá±7Ã`@Q`@Q£3sÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿaü`@Q``@QñPPPPaW=`>=`ý[PPPVþ¡ebzzr0X ýaõùî®p-( Éc{~3Ï-?	ö^¡±) flag{VitalikButerin}
+```
+- The Flag in Last Line `flag{VitalikButerin}`
