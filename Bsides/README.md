@@ -284,3 +284,27 @@ EndFunc
 ``@R`@Qa8a9`@R` a&W`ý[Qda>W`ý[P` aTW`ý[Q`daqW`ý[PPPPP`Q` aaV[PPa;V[T``a``R` ` `` `a×WQ`ÿUaV[`UaW[aWQU` `aéV[[PPaaV[PV[a8[a4W``UP`aV[PV[V[aMaJ`9`óþ``@R`6aFW`5|c_àaHWcX»VasW[[4aTW`ý[Pa]a;V[`@QR` PP`@Qó[4aW`ý[Pa9`6` aW`ý[5` da³W`ý[` aÅW`ý[5` `daçW`ý[`` ` `@Q`@RR` 7`R``PPPPPPPPPPPaZV[[`0sÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ1PV[Q`  Q`  avW`ý[`0sÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ1P3sÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ²UªÑ6ªÂ:Æ ÇY «¾÷Öf:zá±7Ã`@Q`@Q£3sÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿaü`@Q``@QñPPPPaW=`>=`ý[PPPVþ¡ebzzr0X ýaõùî®p-( Éc{~3Ï-?	ö^¡±) flag{VitalikButerin}
 ```
 - The Flag in Last Line `flag{VitalikButerin}`
+#
+# Misc : My Router Password 50 Point
+- He give Me a [zip file](https://github.com/X-Vector/CTF/raw/master/Bsides/paper.zip) When We Extract it We found a pdf file with password
+- We use Jhon The rapper tool or you can use this [Script](https://github.com/kholia/npdf2john/blob/master/pdf2john.pl) To Extract The hash of pdf
+```
+./pdf2john.pl /home/x-vector/Downloads/squnity/paper/paper.pdf >/home/x-vector/Desktop/hash.txt
+```
+- The `hash.txt` Contain This Out Put
+```
+/home/x-vector/Downloads/squnity/paper/paper.pdf:$pdf$2*3*128*-3904*1*16*54ac446c794046bfa6bc3423eee8c2a1*32*9526e8d4ab35530a1100ca08542728bc00000000000000000000000000000000*32*7088c948dbba296d79481d0dda841ccec67c1054f5fc4fc331dd37d8a77226e2
+```
+- We remove Every Thing befor `:` The The Out put Will be
+```
+$pdf$2*3*128*-3904*1*16*54ac446c794046bfa6bc3423eee8c2a1*32*9526e8d4ab35530a1100ca08542728bc00000000000000000000000000000000*32*7088c948dbba296d79481d0dda841ccec67c1054f5fc4fc331dd37d8a77226e2
+```
+- use john tool to get the password with [rockyou wordlist](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)
+```
+john --wordlist /home/x-vector/Desktop/rockyou.txt /home/x-vector/Desktop/hash.txt
+```
+- The Password is `24118904126814948`
+- Now Open The PDF File We Will found image which require a password and he give me a username `UPC3946855`
+![router](https://github.com/X-Vector/CTF/raw/master/Bsides/ss.png)
+- I search in google and found That UPC is router which can accept some password and found this [Website](http://ubee.deadcode.me/) Which Compute The Password of router
+- I take The First Password and Submit it and it's The Flag `APEJFUWD`
