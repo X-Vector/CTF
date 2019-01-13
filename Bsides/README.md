@@ -15,30 +15,31 @@ Old Style                       Reverse Engineering              150            
 Ransom where !                    Cryptography                   100            Solved
 Please don't burn my money       Smart contract                  120              No
 ```
-# General Information : Rocker 20 Point 
+# General Information : 130 Point in 4 Challenge
+- Rocker : 20 Point
 
-- I attack was published about me in Defcon Conference in 2011 I gain access to your phone during the charging process
+I attack was published about me in Defcon Conference in 2011 I gain access to your phone during the charging process
 to execute attack you need a cable that supports power and data connection together
-- The is Flag `juice jacking`
-#
-# General Information : Search with police 30 Point
+The is Flag `juice jacking`
 
-- I'm a new tool developed by a company who unlocked ios phone in a terrorist attack in San Bernardino, California.
+- Search with police  : 30 Point
+
+I'm a new tool developed by a company who unlocked ios phone in a terrorist attack in San Bernardino, California.
 This tool developed to a physical analyzer for smartphones like android and ios
-- The is Flag `UFED`
+The is Flag `UFED`
 
-#
-# General Information : Vegetables 30 Point
+- Vegetables : 30 Point
 
-- I'm an operating system based on Linux designed to encrypt your data using onion routing and works through USB only
-- The is Flag `Tails`
-#
-# General Information : WhoAmi 50 Point
+I'm an operating system based on Linux designed to encrypt your data using onion routing and works through USB only
+The is Flag `Tails`
 
-- I'm Jack and I have a penetration testing process for Automated Teller Machine and I don't have any money to buy rubber ducky or any advanced kits.
+
+- WhoAmi : 50 Point
+
+I'm Jack and I have a penetration testing process for Automated Teller Machine and I don't have any money to buy rubber ducky or any advanced kits.
 I've seen on the internet that I can do this tool with myself with some tools based on open-source hardware, I need something can simulate rubber ducky to inject code and enable PowerShell command or execute a command on Windows...
 What's the name of this piece amid the family names?
-- The is Flag `leonardo`
+The is Flag `leonardo`
 #
 # Web Challenge : d3c0d3 m3 50 Point
 - The Challenge is a [zip](https://github.com/X-Vector/CTF/blob/master/Bsides/c99.zip) file Which Contain a php code
@@ -93,7 +94,8 @@ flag{d3v3l0p3d_f0r_74l3n75}flag{d3v3l0p3d_f0r_74l3n75}
 #
 # Crypto Challenge : Ransom where ! 100 Point
 - The Challenge is a [zip]() file which contain some file and a file called `Ransomware.exe`
-
+- When We use dnspy to decompile The File and The Result is
+![Debugging](https://github.com/X-Vector/CTF/blob/master/Bsides/crypto.webp?raw=true)
 - we have a two cs file `cryptography.cs` and  `Program.cs`
 - The File `cryptography.cs` comtaine The Function That used in Encryption and The file `Program.cs` is a main File
 - in `Program.cs` we have this code
