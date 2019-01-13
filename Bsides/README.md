@@ -4,7 +4,7 @@ Search with police        General Information              30
 Vegetables                General Information              30
 Rocker                    General Information              20
 WhoAmi                    General Information              50
-d3c0d3 m3                   Web Security50	               50
+d3c0d3 m3                   Web Security	           50
 $cript kiddie             Reverse Engineering              50
 Abusing                     Cryptography                   50
 My Router Password              Misc                       50
