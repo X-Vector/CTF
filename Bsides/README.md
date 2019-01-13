@@ -1,17 +1,18 @@
+- We are Revers3c Team Got Secound Place
 ```
-Challenge                     Category                    Point
-Search with police        General Information              30
-Vegetables                General Information              30
-Rocker                    General Information              20
-WhoAmi                    General Information              50
-d3c0d3 m3                   Web Security	           50
-$cript kiddie             Reverse Engineering              50
-Abusing                     Cryptography                   50
-My Router Password              Misc                       50
-Zoom Eye                    Steganography                  50
-Open the safe              smart contract                  75
-Old Style                 Reverse Engineering              150
-Ransom where !              Cryptography                   100
+Challenge                     Category                    Point           Statue
+Search with police        General Information              30             Solved
+Vegetables                General Information              30             Solved
+Rocker                    General Information              20             Solved
+WhoAmi                    General Information              50             Solved
+d3c0d3 m3                    Web Security	           50             Solved
+$cript kiddie             Reverse Engineering              50             Solved
+Abusing                     Cryptography                   50             Solved
+My Router Password              Misc                       50             Solved
+Zoom Eye                    Steganography                  50             Solved
+Open the safe              smart contract                  75             Solved
+Old Style                 Reverse Engineering              150            Solved
+Ransom where !              Cryptography                   100            Solved
 ```
 # General Information : 130 Point in 4 Challenge
 - Rocker : 20 Point
