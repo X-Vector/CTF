@@ -129,7 +129,7 @@ File.WriteAllText(Path.GetTempPath() + str2 + str, Convert.ToString(cryptography
 - We have a file that saved in our path which his name is the 5 random string with .tmp extension
 - This File contain The result of function `cryptography.RSA_m_n_e(left.ToString(), array[1], array[0]))`
 - When I See this Function in `cryptography.cs` I Found That take 3 Parameter Which The First is string Which is Coming from The result of left and The Secound Parameter Take The second BigInteger in array and the Third take the First BigInteger in array
-- This Function is RSA Function Which This Attack is Wiener Attack Becouse `e` is Very BigInteger
+- This RSA Function is Wiener Attack Becouse `e` is Very BigInteger
 - Let's see The tmp file That Saved in our path
 - We have 4 file which have 5 string and this extension is .tmp and all of them contain a BigInteger
 - The RSA Function encode the Plaintext and saved the Cipher in a one file from our 4 file , So I decode all cipher in 4 files and get this Number
